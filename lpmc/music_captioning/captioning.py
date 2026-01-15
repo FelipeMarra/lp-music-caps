@@ -17,7 +17,7 @@ from lpmc.utils.audio_utils import load_audio, STR_CH_FIRST
 from omegaconf import OmegaConf
 
 parser = argparse.ArgumentParser(description='PyTorch MSD Training')
-parser.add_argument('--gpu', default=1, type=int,
+parser.add_argument('--gpu', default=0, type=int,
                     help='GPU id to use.')
 parser.add_argument("--framework", default="transfer", type=str)
 parser.add_argument("--caption_type", default="lp_music_caps", type=str)

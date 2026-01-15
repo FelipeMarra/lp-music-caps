@@ -14,8 +14,8 @@ def print_model_params(model):
     print('number train of params (M): %.2f' % (train_n_parameters / 1.e6))
     print("============")
     
-def load_pretrained(args, save_dir, model, model_types="last", mdp=False):
-    pretrained_object = torch.load(f'{save_dir}/{model_types}.pth', map_location='cpu')
+def load_pretrained(args, save_dir, model, mdp=False):
+    pretrained_object = torch.load(f'{save_dir}/{args.model_type}.pth', map_location='cpu')
     state_dict = pretrained_object['state_dict']
     save_epoch = pretrained_object['epoch']
     if mdp:
